@@ -1,0 +1,37 @@
+li.br:hover, a.br:hover
+{
+	background-color: #78909c !important;
+	color: #fff;
+}
+
+.columna-50
+{
+	width: 50%;
+}
+
+li.linea1:hover, a.linea1:hover
+{
+	background-color: #455a64 !important;
+}
+
+.texto
+{
+	color: #666; 
+	font-size: 14px;
+}
+
+.icon
+{
+	font-size: 80px;
+}
+
+a.enlace-lista
+{
+	color: #fff;
+	width: 100%;
+}
+
+a.item-menu, p.item-menu
+{
+	cursor: pointer;
+}

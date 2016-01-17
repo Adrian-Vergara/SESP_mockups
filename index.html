@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="SaberApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Prueba Menú</title>
+	<link rel="stylesheet" href="css/materialize.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/estilo_menu.css">
+</head>
+<body>
+	
+	
+  <nav>
+    <div class="nav-wrapper light-blue darken-3">
+      <h4 href="#!" class="brand-logo">SaberApp Pro</h4>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
+      <ul class="side-nav blue-grey darken-2" id="mobile-demo">
+      	<li class="linea1">
+      		<a class="linea1" style="color: #fff; width:100%;"></a>
+        </li>
+        <li class="br linea">
+        	<a class="br enlace-lista item-menu" href="sass.html">
+        		<i class="material-icons left">school</i>Adrián Vergara
+        	</a>
+        </li>
+        <li class="br linea">
+        	<a class="br enlace-lista item-menu" href="badges.html">Entrenamiento
+        		<i class="material-icons left">directions_bike</i>
+        	</a>
+        </li>
+        <li class="br">
+        	<a class="br enlace-lista item-menu" href="collapsible.html">Simulacro
+        		<i class="material-icons left">directions_run</i>
+        	</a>
+		</li>
+        <li class="br">
+        	<a class="br enlace-lista item-menu" href="mobile.html">Retos
+        		<i class="material-icons left">pool</i>
+        	</a>
+        </li>
+        <li class="br">
+        	<a class="br enlace-lista item-menu" href="mobile.html">Resultados
+        		<i class="material-icons left">trending_up</i>
+        	</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div ng-view></div>
+
+	<script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="scripts/materialize.min.js"></script>
+  	<script type="text/javascript" src="scripts/angular.min.js"></script>
+  	<script type="text/javascript" src="scripts/angular-route.min.js"></script>
+  	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript">
+		$(".button-collapse").sideNav();
+	</script>
+</body>
+</html>
