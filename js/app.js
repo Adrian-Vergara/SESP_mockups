@@ -55,6 +55,12 @@ app.config(function($routeProvider){
         .when("/", {
             templateUrl: "templates/menu_principal.html"
         })
+        .when("/menu-entrenamiento",{
+            templateUrl: "templates/menu-entrenamiento.html"
+        })
+        .when("/detalle-entrenamiento",{
+            templateUrl: "templates/detalle-entrenamiento.html"
+        });
 });
 
 

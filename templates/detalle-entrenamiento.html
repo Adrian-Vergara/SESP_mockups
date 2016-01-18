@@ -1,0 +1,61 @@
+<div class="container contenedor" ng-controller="detalleEntrenamientoCtrl as vm">
+    <div class="row">
+        <form class="col s12">
+            <div class="row fila">
+                <div class="input-field col s5">
+                    <label style="font-weight: bold;">
+                        <i class="material-icons left">touch_app</i>Número Preguntas
+                    </label>
+                </div>
+                <div class="input-field col s7">
+                    <p class="range-field">
+                        <input type="range" min="5" max="35" step="5" required ng-model="vm.num_preguntas" ng-change="vm.calcularTiempo()">
+                    </p>
+                </div>
+            </div>
+            <div class="row" ng-repeat="competencia in vm.competencias">
+                <div class="input-field col s5">
+                    <label style="font-weight: bold;">
+                        <i class="material-icons left">{{competencia.icon}}</i>{{competencia.nombre_competencia}}
+                    </label>
+                </div>
+                <div class="input-field col s5">
+                    <div class="switch">
+                        <label>
+                            OFF<input style="color: #0277bd" type="checkbox" ng-model="competencia.estado" ng-change="vm.change(competencia.estado, competencia, $index)"><span class="lever"></span>ON
+                        </label>
+                    </div>
+                </div>
+                <div class="input-field col s2">
+                    <label style="font-weight: bold; text-align: right;" ng-show="competencia.estado == true">{{vm.num_preguntas}}</label>
+                </div>
+                <br><br>
+            </div>
+            <div class="row">
+                <div class="input-field col s5"></div>
+                <div class="input-field col s5">
+                    <label>Total Preguntas</label>
+                </div>
+                <div class="input-field col s2">
+                    <label style="font-weight: bold; text-align: right;" ng-show="vm.num_preguntas * vm.competencias_preguntas.length != 0">{{vm.num_preguntas * vm.competencias_preguntas.length}}</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s5"></div>
+                <div class="input-field col s5">
+                    <label>Tiempo para Responder</label>
+                </div>
+                <div class="input-field col s2">
+                    <label style="font-weight: bold; text-align: right;" ng-show="vm.num_preguntas * vm.competencias_preguntas.length != 0">{{vm.minutos}}:{{vm.segundos}}</label>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="row" style="text-align: center;">
+                <a style="margin-right: 20px;" class="waves-effect waves-light btn button-text"><i class="material-icons right">cloud</i>Detalles</a>
+                <a class="waves-effect waves-light btn button-text"><i class="material-icons right">cloud</i>Entrenar</a>
+            </div>
+        </form>
+    </div>
+</div>

@@ -35,3 +35,18 @@ a.item-menu, p.item-menu
 {
 	cursor: pointer;
 }
+
+.contenedor
+{
+	margin-top: 40px;
+}
+
+div.fila
+{
+	margin-bottom: 0px;
+}
+
+a.button-text
+{
+	text-transform: capitalize;
+}
